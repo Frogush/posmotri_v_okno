@@ -61,6 +61,7 @@ ol {
   display: flex;
   align-self: flex-end;
   flex-direction: column;
+  padding-top: 80px;
   gap: 16px;
 }
 
@@ -124,12 +125,17 @@ ol {
   border: none;
   border-top: 1px solid #FFF;
   border-bottom: 1px solid #FFF;
-  color: rgba(255, 255, 255, 0.70);
+  color: white;
   background-color: inherit;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
+  appearance: none; 
+}
+
+.search-form__textfield::placeholder {
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .search-form__textfield:focus {
@@ -227,25 +233,25 @@ ol {
 .content__list {
   position: relative;
   display: flex;
-  overflow-y: scroll;
+  overflow: auto;
   flex-direction: column;
   max-block-size: 298px;
-  gap: 30px;
 }
 
 .content__list:last-child {
-  padding-bottom: 3px;
-  padding-left: 3px; 
-}
-
-.content__list::-webkit-scrollbar {
-  display: none;
+  padding-bottom: 2px;
+  padding-left: 2px; 
 }
 
 .content__list-item {
   box-sizing: content-box;
   padding: 2px;
+  margin-bottom: 30px;
   block-size: 103px;
+}
+
+.content__list-item:nth-last-child(2) {
+  margin-bottom: 0px;
 }
 
 .content__list-item:has(.content__card-link_current){
@@ -260,6 +266,10 @@ ol {
 .content__list-item:active{
   background-color: #545050;
 }
+
+.content__list::-webkit-scrollbar { 
+  display: none; 
+} 
 
 .content__card-link {
   display: block;
@@ -277,7 +287,7 @@ ol {
 
 .content__video-card {
   display: grid;
-  grid-template-columns: auto 194px;
+  grid-template-columns: auto 176px;
 }
 
 .content__video-card-description-container {
@@ -305,11 +315,13 @@ ol {
 
 .content__video-card-thumbnail {
   block-size: 103px;
-  inline-size: 194px;
+  inline-size: 175px;
   object-fit: cover;
+  object-position: center;
 }
 
 .more-button {
+  margin-top: 30px;
   block-size: 34px;
   inline-size: 99%;
 }
