@@ -243,6 +243,19 @@ ol {
   padding-left: 2px; 
 }
 
+.content__list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.content__list::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.70);
+}
+
+.content__list::-webkit-scrollbar-thumb {
+  width: 4px;
+  background-color: #545050;
+}
+
 .content__list-item {
   box-sizing: content-box;
   padding: 2px;
